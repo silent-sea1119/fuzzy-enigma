@@ -3,7 +3,7 @@
 
 ## ECMAScript
 
-- [使Promise.all()不会rejected从而并行处理多个fetch](../ECMAScrips/使Promise.all()不会rejected从而并行处理多个fetch.md)
+- [使Promise.all()不会rejected从而并行处理多个fetch](./ECMAScrips/使Promise.all()不会rejected从而并行处理多个fetch.md)
 
 
 ## CSS
