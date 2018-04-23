@@ -16,6 +16,10 @@
 
 ## Web API
 
+### Fetch API
+
+- [为Fetch API添加添加超时处理](./WebAPI/Fetch/为FetchAPI添加超时处理.md)
+- 
 
 ## Python
 
