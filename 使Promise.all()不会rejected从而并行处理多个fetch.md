@@ -88,22 +88,22 @@ Promise.all(urls.map(url => fetch(url).catch(err => err)))
 上面的方案从理论上来说是无可挑剔的，“完美！”，唯一的遗憾就是在写法上有些繁琐，下面我们尝试使用 `async function` 结合 `try/catch` 来重写之前的示例代码.
 
 ``` javascript
-const parallelRequest = async () => {
-	const result = await Promise.all(  
-	  urls.map(async url => {
-	    try {
-	      const response = await fetch(url);
-	      const responseJson = await response.json();
-	      
-	      if (!response.ok) {
-	        throw new Error(`${response.statusText}`);
-	      } 
-	      return responseJson;  
-	   } catch (error) {  
-	    return error;
-	   }
-	 })
-	);
+const parallelRequest = async() => {  
+  const result = await Promise.all(
+    urls.map(async url => {
+      try {  
+        const response = await fetch(url);  
+        const responseJson = await response.json();  
+ 
+        if (!response.ok) {  
+          throw new Error(`${response.statusText}`);  
+        }
+        return responseJson;  
+      } catch (error) {  
+        return error;  
+      }
+    })
+  );
 };
 ```
 
