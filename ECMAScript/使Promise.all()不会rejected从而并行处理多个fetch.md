@@ -1,6 +1,6 @@
 
 ## 问题
-在 JavaScript 中，我们可以通过 `Promise.all()` 从而并行执行多个代码片段。然而由于 `Promise.all()` 的自身特性，如果其中某一个 Promise 一旦 rejected，那么 `Promise.all()` 也会理解 rejected 。
+在 JavaScript 中，我们可以通过 `Promise.all()` 从而并行执行多个代码片段。然而由于 `Promise.all()` 的自身特性，如果其中某一个 Promise 一旦 rejected，那么 `Promise.all()` 结果也会立即 rejected 。
 
 ``` javascript
 const p1 = new Promise((resolve, reject) => resolve('first'));
